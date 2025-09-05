@@ -1,9 +1,10 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import MenuOpenIcon from "@mui/icons-material/MenuOpen";
+
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = (prop) => {
+  const location = useLocation();
   return (
     <Box
       sx={{
@@ -30,7 +31,23 @@ const Navbar = (prop) => {
               WebStudy
             </Typography>
           </Grid>
-          <Grid size={{ md: 3, sm: 3, xs: 3 }}>s</Grid>
+          <Grid size={{ md: 3, sm: 3, xs: 3 }}>
+            {location.pathname === "/" ? (
+              <Link
+                to={"/students"}
+                style={{ textDecoration: "none", color: "currentcolor" }}
+              >
+                <Button variant="contained">O'quvchilar</Button>
+              </Link>
+            ) : (
+              <Link
+                to={"/"}
+                style={{ textDecoration: "none", color: "currentcolor" }}
+              >
+                <Button variant="contained">Ortga</Button>
+              </Link>
+            )}
+          </Grid>
         </Grid>
       </Container>
     </Box>
