@@ -1,7 +1,7 @@
 import { Box, Button, Container, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import { students } from "../data/studentsData";
+import { studentsData } from "../data/StudentsData";
 import Students from "../components/StudenTable";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -47,7 +47,7 @@ const StudentList = () => {
             fontSize={matches ? "20px" : "20px"}
             color="white"
           >
-            Students - {students.length}
+            Students - {studentsData.length}
           </Typography>
 
           {/* Search input */}
@@ -63,7 +63,7 @@ const StudentList = () => {
           />
         </Box>
 
-        <Students students={students} />
+        <Students students={studentsData} />
       </Container>
     </Box>
   );

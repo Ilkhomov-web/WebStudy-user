@@ -1,11 +1,12 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
 import WeekStudents from "./weekStundet/WeekStudents";
-import { students } from "../data/studentsData";
+import { studentsData } from "../data/StudentsData";
+
 import { motion } from "framer-motion";
 
 const WeekCards = () => {
-  const topStudent = students.reduce((prev, current) =>
+  const topStudent = studentsData.reduce((prev, current) =>
     current.total_grade > prev.total_grade ? current : prev
   );
 

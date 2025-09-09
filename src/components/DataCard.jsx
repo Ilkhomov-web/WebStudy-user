@@ -1,6 +1,7 @@
 // DataCard.jsx
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { studentsData } from "../data/StudentsData";
 
 const DataCard = (prop) => {
   const { title, value } = prop;

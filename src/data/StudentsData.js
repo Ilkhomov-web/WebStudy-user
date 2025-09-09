@@ -1,6 +1,6 @@
 // studentsData.js
 
-export const students = [
+export const studentsData = [
     {
       id: 1,
       name: "Behruzbek",

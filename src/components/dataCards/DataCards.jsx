@@ -1,17 +1,17 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import DataCard from "../DataCard";
-import { students } from "../../data/studentsData";
+import { studentsData } from "../../data/StudentsData";
 
 const DataCards = () => {
-  const topStudent = students.reduce((max, student) =>
+  const topStudent = studentsData.reduce((max, student) =>
     student.total_grade > max.total_grade ? student : max
   );
 
   return (
     <Grid container spacing={2} sx={{ marginTop: "20px" }}>
       <Grid size={{ md: 6, sm: 12, xs: 12 }}>
-        <DataCard title="Total Students" value={students.length} />
+        <DataCard title="Total Students" value={studentsData.length} />
       </Grid>
       <Grid size={{ md: 6, sm: 12, xs: 12 }}>
         <DataCard

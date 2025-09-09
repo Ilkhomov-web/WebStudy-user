@@ -1,6 +1,6 @@
 import React from "react";
 import { PieChart } from "@mui/x-charts/PieChart";
-import { students } from "../../data/studentsData";
+import { studentsData } from "../../data/StudentsData";
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -12,7 +12,7 @@ const PieCharts = () => {
     <PieChart
       series={[
         {
-          data: students.map((student) => ({
+          data: studentsData.map((student) => ({
             id: student.id,
             value: student.total_grade,
             label: student.name,
