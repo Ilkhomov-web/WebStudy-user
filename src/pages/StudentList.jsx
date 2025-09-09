@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import { students } from "../data/studentsData";
 import Students from "../components/StudenTable";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const style = {
   position: "absolute",
@@ -20,6 +22,8 @@ const style = {
 };
 
 const StudentList = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <Box>
       <Navbar />
@@ -38,7 +42,11 @@ const StudentList = () => {
             alignItems: "center",
           }}
         >
-          <Typography variant="h4" color="white">
+          <Typography
+            variant="h4"
+            fontSize={matches ? "20px" : "20px"}
+            color="white"
+          >
             Students - {students.length}
           </Typography>
 
@@ -50,7 +58,7 @@ const StudentList = () => {
             sx={{
               backgroundColor: "white",
               borderRadius: 1,
-              width: "250px",
+              width: matches ? "250px" : "100px",
             }}
           />
         </Box>

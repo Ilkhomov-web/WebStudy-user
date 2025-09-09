@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh; /* 100% dan uzun bo‘lsa scroll bo‘ladi */
-  background-image: url(/back.jpg);
+  background-image: url('https://images.pexels.com/photos/29708307/pexels-photo-29708307.jpeg');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;

@@ -2,7 +2,12 @@ import React from "react";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { students } from "../../data/studentsData";
 
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 const PieCharts = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <PieChart
       series={[
@@ -14,9 +19,11 @@ const PieCharts = () => {
           })),
         },
       ]}
-      width={400}
+      width={matches ? 400 : 200}
       height={300}
       sx={{
+        display: "flex",
+        flexDirection: matches ? "row" : "column",
         "& .MuiChartsLegend-root": {
           color: "#fff",
           fontSize: "18px",

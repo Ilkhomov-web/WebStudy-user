@@ -30,7 +30,7 @@ const Charts = () => {
         }}
       >
         <GuiChart />
-        <Typography variant="h4" color="white">
+        <Typography variant="h4" textAlign={"center"} color="white">
           Learning Speed
         </Typography>
       </Grid>
