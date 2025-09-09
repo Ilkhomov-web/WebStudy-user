@@ -10,7 +10,7 @@ export const studentsData = [
     {
       id: 2,
       name: "Fattohbek",
-      img: "https://img.pikbest.com/png-images/20240511/3d-graduate-male-student-with-hat-cartoon-character_10560477.png!bw700",
+      img: "/fattoh.jpg",
       total_grade: 70,
     },
     {
